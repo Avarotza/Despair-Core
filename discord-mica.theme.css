@@ -32,3 +32,16 @@
 {
 	background: var(--dark-background-sidebar) !important;
 }
+
+.visual-refresh .form_f75fb0
+{
+  background-color: #0000;
+    & .base_b88801
+    {
+      background-color: #0000;
+        .typingDots_b88801, .cooldownText_b21699
+        { /*typing blend*/
+        background-color: #0000 !important;
+        }
+    }
+}

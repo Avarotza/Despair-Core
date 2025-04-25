@@ -1,9 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.7
- * @invite D9uwnFnqmd
- * @description Collapsible Sidebars.
+ * @version 0.0.8
 */
 
 :root
@@ -47,7 +45,8 @@
   position: fixed; /* Floating user panel (status, deafen, etc) */
   left: 5px;
   width: 52px;
-  background-color: var(--background-userarea-color) !important;
+  background: linear-gradient(135deg, rgba(67, 67, 67, .350) 0%, rgba(0, 0, 0, .350) 100%) !important;
+  background-color: #0000007c !important;
   border-radius: 25px !important;
   border: #0000 !important;
   z-index: 999;
@@ -60,7 +59,7 @@
 .visual-refresh .panel__5dec7 /*Current game panel | pill mode*/
 {
   transition: all .325s cubic-bezier(0.165, 0.84, 0.44, 1);
-  background-color: #000000e5 !important;
+  background-color: #0000 !important;
   height: 40px;
   width: 40px;
   border-radius: 25px 25px 0 0 !important; /*Might break something*/
@@ -123,7 +122,6 @@
 {
   width: 9px !important;
   height: 9px !important;
-
   /*Behind user prototype*/
   /* width: 41px !important;
   height: 41px !important;
@@ -139,11 +137,17 @@
 {
   margin-left: 0;
 }
+.wrapper__44b0c.avatar__37e49
+{
+  background: linear-gradient(90deg, #434343b6 0%, #0000009c 100%);
+  background-blend-mode: soft-light,screen;
+}
 
+/*-- Hover --*/
 .visual-refresh [class^="panels_"]:hover /*Hover of the user Area*/
- { 
+{ 
   border-radius: 12px !important;
-  width: 220px;
+  width: 240px;
   z-index: 9999;
   background-color: #000000e5 !important;
   overflow: hidden;
@@ -153,7 +157,8 @@
 {
   opacity: 100%;
   scale: 100%;
-  width: 200px;
+  width: 229px;
+  border-color: #0000;
   display: flex !important;
 }
 .visual-refresh [class^="panels_"]:hover .containerRtcOpened__37e49 /*no balls after call on hover*/
@@ -181,7 +186,7 @@
 }
 .visual-refresh [class^="panels_"]:hover .panelButtonContainer__4cd01
 {
-  margin-left: 22px;
+  margin-left: 44px;
 }
 .visual-refresh [class^="panels_"]:hover .panelButtonContainer__4cd01 button:hover
 {

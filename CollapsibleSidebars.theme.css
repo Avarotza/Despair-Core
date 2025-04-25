@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8
+ * @version 0.0.8.1
 */
 
 :root
@@ -45,8 +45,7 @@
   position: fixed; /* Floating user panel (status, deafen, etc) */
   left: 5px;
   width: 52px;
-  background: linear-gradient(135deg, rgba(67, 67, 67, .350) 0%, rgba(0, 0, 0, .350) 100%) !important;
-  background-color: #0000007c !important;
+  background-color: #0000 !important;
   border-radius: 25px !important;
   border: #0000 !important;
   z-index: 999;
@@ -149,7 +148,8 @@
   border-radius: 12px !important;
   width: 240px;
   z-index: 9999;
-  background-color: #000000e5 !important;
+  background: linear-gradient(135deg, rgba(67, 67, 67, .350) 0%, rgba(0, 0, 0, .350) 100%) !important;
+  background-color: #0000007c !important;
   overflow: hidden;
 }
 .visual-refresh [class^="panels_"]:hover .container_e131a9, /* unpill stuff */

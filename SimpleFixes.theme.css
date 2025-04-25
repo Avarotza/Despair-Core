@@ -25,13 +25,6 @@
     /* --home-icon: url("Wife.gif"); */
 }
 
-/*Home button swapper*/
-.tutorialContainer__1f388 .wrapper__6e9f8 .childWrapper__6e9f8 {
-    background: var(--home-icon) center/cover no-repeat scroll;
-    image-resolution: from-image 300dpi;
-    color: rgba(0, 0, 0, 0)
-}
-
 /* Hide nameplates */
 [style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
 [class*="dm_"]:has([class*="linkPlated_"]) {

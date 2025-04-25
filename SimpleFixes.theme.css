@@ -1,0 +1,203 @@
+/**
+ * @name Discord Simple Fixes
+ * @author avarotza
+ * @version 0.0.4
+ * @invite D9uwnFnqmd
+ * @description Simple fixes from the Vencord Server.
+*/
+
+@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
+@import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
+
+:root {
+    /* change padding of the bar */
+     --rscb-chat-box-padding: 7px; /* default is 8px for alignment */
+     /* controls the vertical position of the window buttons */
+   /* controls the vertical position of the window buttons */
+    --vr-header-snippet-top: 0px !important;
+    /* controls the space above the server list */
+    --vr-header-snippet-server-padding: 16px !important;
+    /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
+    --vr-header-snippet-space: 220px !important;
+    /* controls the space to the right of the window buttons, good if you are using themes like midnight which add padding to the bar */
+    --vr-header-snippet-button-padding: 0 !important;
+    /*Discord home icon*/
+    /* --home-icon: url("Wife.gif"); */
+}
+
+/*Home button swapper*/
+.tutorialContainer__1f388 .wrapper__6e9f8 .childWrapper__6e9f8 {
+    background: var(--home-icon) center/cover no-repeat scroll;
+    image-resolution: from-image 300dpi;
+    color: rgba(0, 0, 0, 0)
+}
+
+/* Hide nameplates */
+[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
+[class*="dm_"]:has([class*="linkPlated_"]) {
+    & [class*="linkPlated_"] { padding-right: var(--space-16); }
+    & [class*="closeButtonPlated_"] {
+        opacity: 0.7;
+        &:hover { opacity: 1; }
+        & [class^="innerCloseButtonPlated"] {
+            opacity: unset; 
+            background: none;
+            & svg {
+                color: inherit;
+                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
+            }
+        }
+    }
+}
+
+/* Hide Activity Status*/
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+
+nav.guilds_c48ade {
+  margin-bottom: 0 !important;
+}
+.sidebar_c48ade:after {
+  display: none;
+}
+
+/* Colored role pills*/
+.role_dfa8b6.pill_dfa8b6 {
+    position: relative;
+    background: none;
+    border: none;
+    padding-left: 28px;
+}
+.role_dfa8b6.pill_dfa8b6 > span {
+    z-index: 1;
+}
+.role_dfa8b6.pill_dfa8b6 .roleRemoveButton_dfa8b6 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0 !important;
+}
+.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569 {
+    margin: 6px 8px;
+}
+.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: var(--radius-xs);
+    filter: brightness(1.1);
+    opacity: 0.25;
+}
+
+/* Vencord loading */
+.content_a2f514 {
+    display: flex;
+    flex-direction: column;
+    > .spinner_a2f514 { display: none }
+    &:before {
+        display: block;
+        height: 128px;
+        position: relative;
+        content: url(https://raw.githubusercontent.com/Vencord/Vesktop/refs/heads/main/static/shiggy.gif);
+        image-rendering: pixelated;
+         align-content: center;
+         scale: 3.125;
+         margin-bottom: 96px;
+    }
+}
+
+/*Search bar fix*/
+@media screen and (max-width: 1080px)
+{
+  .DraftEditor-root
+  {
+    padding: 0 !important;
+    opacity: 0 !important;
+  }
+  .search__97492.open__97492.focused__97492 .DraftEditor-root
+  {
+    opacity: 1 !important;
+  }
+
+  .visual-refresh .searchBar__97492
+  {
+    width: 28px;
+    border: 0;
+  }
+
+  .search__97492.open__97492.focused__97492 .searchBar__97492,
+  .search__49676 .search__97492.open__97492  .searchBar__97492
+  {
+    width: 140px !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+  }
+}
+
+/* Aka remover*/
+.dot__9293f,
+.akaBadge__488b1,
+.nicknames__488b1
+{
+  display: none;
+}
+
+/* Collapsible chat buttons/
+[class^=chat_] [class*=textArea_] {
+  margin-right: 32px;
+  +[class^=buttons_] {
+    position: absolute;
+    right: 0;
+    background-color: hsl(var(--neutral-81) / 0.5);
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    &:not(:hover)>:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+
+/*Old discord User area/
+.visual-refresh section[aria-label="User area"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);;
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+}
+.visual-refresh nav:has([data-list-id="guildsnav"]) {
+  margin-bottom: unset;
+}
+
+/*Relative user area/
+.visual-refresh section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width) + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
+  box-sizing: content-box;
+  .actionButtons_e131a9 button {
+    padding: 0;
+  }
+  /* GameActivityToggle Fix (delete if you don't use) */
+  /* .container__37e49 {
+    padding: var(--space-xxs);
+    gap: var(--space-4);
+    >.buttons__37e49 {
+      gap: 0;
+    }
+    >.avatarWrapper__37e49 {
+      min-width: 32px !important;
+      >.avatar__37e49 {
+        scale: 0.9;
+      }
+    }
+  } 
+}*/

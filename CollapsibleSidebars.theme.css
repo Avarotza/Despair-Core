@@ -1,0 +1,243 @@
+/**
+ * @name Collapsible Sidebars
+ * @author scattagain, Avarotza
+ * @version 0.0.7
+ * @invite D9uwnFnqmd
+ * @description Collapsible Sidebars.
+*/
+
+:root
+{
+  --background-sidebar-color: var(--dark-background-sidebar);
+  --background-userarea-color: var(--dark-status-panel);
+  --status-panel: #0000 !important;
+}
+
+/*Search bar radius fix*/
+.sidebarListRounded_c48ade
+{
+  border-radius: 0 !important;
+}
+/* Collapsible sidebars */
+.visual-refresh [class^="sidebarList_"] {
+  position: fixed; /* Remove if you don't want it to float */
+  width: 150px; /* Set to 0px if you don't want it to float */
+  container-type: unset;
+  opacity: 0%;
+  height: 100%;
+  z-index: 998;
+  left: -70px;
+  background-color: var(--background-sidebar-color);
+  transition-property: opacity, left, width;
+  transition-duration: .335s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.visual-refresh [class^="sidebar_"]:hover [class^="sidebarList_"] {
+  left: 70px;
+  opacity: 100%;
+  width: 300px; /* Set your preferred width here (resize handle is disabled) */
+}
+
+.visual-refresh [class*="guilds"] {
+  z-index: 999; /* So the sidebar pops from behind the servers */
+}
+
+.visual-refresh [class^="panels_"] {
+  position: fixed; /* Floating user panel (status, deafen, etc) */
+  left: 5px;
+  width: 52px;
+  background-color: var(--background-userarea-color) !important;
+  border-radius: 25px !important;
+  border: #0000 !important;
+  z-index: 999;
+  transition: all .325s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.visual-refresh .containerRtcOpened__37e49
+{
+  border-radius: 25px !important;
+}
+.visual-refresh .panel__5dec7 /*Current game panel | pill mode*/
+{
+  transition: all .325s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #000000e5 !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 25px 25px 0 0 !important; /*Might break something*/
+  padding: 6px 6px 12px 6px;
+  border-bottom-width: 0px;
+}
+.body__5dec7
+{
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 40px;
+  width:  40px;
+}
+.gameWrapper__5dec7
+{
+  margin: 2px 0 0 1.5px ;
+}
+.wrapper_a629d4
+{
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 0;
+}
+.badge_a629d4
+{
+  bottom: 7px;
+  height: 9px;
+  position: absolute;
+  right: 9px;
+  width: 9px;
+}
+.gameIconWrapper__8c6c2
+{
+  height: 40px;
+}
+.visual-refresh .panel__5dec7 img /*current game panel img*/
+{
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 0;
+  transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.body__5dec7        /*width patch*/
+{
+  width: auto; 
+}
+.container_e131a9,  /*button hider*/
+.actions__4cd01,    /*button hider*/
+.info__8c6c2        /*button hider*/
+{
+  display: none !important;
+}
+.avatarStack__44b0c
+{
+  z-index: 1002 !important;
+}
+.avatar__37e49 rect
+{
+  width: 9px !important;
+  height: 9px !important;
+
+  /*Behind user prototype*/
+  /* width: 41px !important;
+  height: 41px !important;
+  y:0 !important;
+  x:0 !important;
+  fill: transparent; */
+}
+.liveBadge__8c6c2
+{
+  background-color: var(--background-userarea-color);
+}
+.container__37e49
+{
+  margin-left: 0;
+}
+
+.visual-refresh [class^="panels_"]:hover /*Hover of the user Area*/
+ { 
+  border-radius: 12px !important;
+  width: 220px;
+  z-index: 9999;
+  background-color: #000000e5 !important;
+  overflow: hidden;
+}
+.visual-refresh [class^="panels_"]:hover .container_e131a9, /* unpill stuff */
+.visual-refresh [class^="panels_"]:hover .wrapper_e131a9:hover /* unpill stuff */
+{
+  opacity: 100%;
+  scale: 100%;
+  width: 200px;
+  display: flex !important;
+}
+.visual-refresh [class^="panels_"]:hover .containerRtcOpened__37e49 /*no balls after call on hover*/
+{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.visual-refresh [class^="panels_"]:hover .actions__4cd01, /* unpill stuff */
+.visual-refresh [class^="panels_"]:hover .info__8c6c2 /* unpill stuff */
+{
+  display: flex !important;
+}
+.visual-refresh [class^="panels_"]:hover .panel__5dec7 /*Hover of the current game panel*/
+{
+  padding: 6px 6px 12px 6px;
+}
+.visual-refresh [class^="panels_"]:hover .gameWrapper__5dec7,
+.visual-refresh [class^="panels_"]:hover .panel__5dec7 img /* Hover of the current game img*/
+{
+  margin: 5px 0 0 0;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  transform: rotate(360deg);
+}
+.visual-refresh [class^="panels_"]:hover .panelButtonContainer__4cd01
+{
+  margin-left: 22px;
+}
+.visual-refresh [class^="panels_"]:hover .panelButtonContainer__4cd01 button:hover
+{
+  border-radius: 50px;
+  scale: 1.4;
+}
+.visual-refresh [class^="panels_"]::after /*bg removal of the image*/
+{ 
+  padding-left: 20px;
+}
+
+.visual-refresh [class^="panels_"] [class^="container__"] [class^="buttons__"] {
+
+  opacity: 0%;
+  scale: 0%; /* Because the buttons can't stay inside the panel on chromium (any help is appreciated) */
+  transition-property: opacity, margin-bottom, scale;
+  transition-duration: .445s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.avatar__44b0c::before
+{
+  background-color: #0000 !important;
+}
+
+.visual-refresh .panels_c48ade:hover [class^="container__"] [class^="buttons__"] {
+ 
+   scale: 100%;
+   opacity: 100%;
+}
+
+.visual-refresh [class^="sidebarResizeHandle_"] {
+  display: none; /* Set your preferred width in the sidebar settings */
+}
+
+.visual-refresh [class^="container_"] [class^="membersWrap_"] {
+  position: fixed; /* Remove if you don't want it to float */
+  height: 100%;
+  opacity: 0%;
+  z-index: 999;
+  right: -240px;
+  /*top: 80px;  /* Add/change this according to your desktop/client */
+  filter: drop-shadow(-16px -16px 16px rgba(0, 0, 0, 0.096)) ;
+  background-color: var(--background-sidebar-color);
+  transition-property: right, opacity;
+  transition-duration: .225s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.visual-refresh [class^="container_"] [class^="membersWrap_"]:hover {
+  right: 0px;
+  opacity: 100%;
+}
+
+.visual-refresh button.button__67645,
+.visual-refresh span.button__67645
+{
+  transition: .225s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}

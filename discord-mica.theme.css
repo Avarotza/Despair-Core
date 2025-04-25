@@ -1,0 +1,34 @@
+/**
+ * @name Discord Mica patch
+ * @author Avarotza
+ * @version 0.1
+ * @description patch for discord mica for other themes
+ */
+
+ @import url("https://discord-mica.pages.dev/src/main.css");
+
+ :root {
+  /*Dark mode*/
+  --dark-bg: transparent; /*rgba(240,185,190,0.113); to achieve screenshot looking*/
+  --dark-flyout: rgba(30,30,30);
+  --dark-accent: rgb(34, 149, 207);
+  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent-font-color: rgb(10, 10, 10);
+  --dark-button: rgb(45,45,45);
+  --dark-button-border: rgb(60, 60, 60);
+  --dark-button-font-color: white;
+  --dark-background-accent: rgba(50,50,50,0.9);
+  --dark-background-sidebar: rgba(31, 31, 31, 0.7);
+  --dark-status-panel: rgba( 8, 8, 8, 0.8);
+
+  /* Titlebar */
+  --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */
+  --title-bar-icon: flex; /* Set to none to remove icons */
+  }
+
+.visual-refresh .clickable_f37cb1, .visual-refresh .hasBanner_f37cb1 .header_f37cb1, /*Server name*/
+#app-mount .container__2637a, .sidebar_c48ade /*Server Sidebar*/,
+.scroller__99e7c, .privateChannels__35e86 /*DMs Sidebar*/
+{
+	background: var(--dark-background-sidebar) !important;
+}

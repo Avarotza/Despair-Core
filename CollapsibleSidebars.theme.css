@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.5
+ * @version 0.0.8.6
 */
 
 :root
@@ -36,6 +36,10 @@
   width: 300px; /* Set your preferred width here (resize handle is disabled) */
 }
 
+.content__99f8c div[style="height: 84px;"] /*fuck you discord in specific fix*/
+{
+  display: none !important; /*fixes the stupid bar below img/gif banners*/
+}
 /*Image banner fix*/
 .animatedContainer_f37cb1,
 .bannerImage_f37cb1

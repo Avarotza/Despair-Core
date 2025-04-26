@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.1
+ * @version 0.0.8.2
 */
 
 :root
@@ -171,6 +171,11 @@
 {
   display: flex !important;
 }
+.visual-refresh [class^="panels_"]:hover .info__8c6c2 /* max width stuff */
+{
+  width: 153px;
+  max-width: 153px;
+}
 .visual-refresh [class^="panels_"]:hover .panel__5dec7 /*Hover of the current game panel*/
 {
   padding: 6px 6px 12px 6px;
@@ -183,10 +188,6 @@
   width: 32px;
   height: 32px;
   transform: rotate(360deg);
-}
-.visual-refresh [class^="panels_"]:hover .panelButtonContainer__4cd01
-{
-  margin-left: 44px;
 }
 .visual-refresh [class^="panels_"]:hover .panelButtonContainer__4cd01 button:hover
 {

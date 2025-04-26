@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.4
+ * @version 0.0.8.5
 */
 
 :root
@@ -42,7 +42,7 @@
 {
   position: relative !important;
 }
-.bannerImg_f37cb1
+.visual-refresh div.bannerImage_f37cb1 img.bannerImg_f37cb1
 {
   width: 300px !important;
 }

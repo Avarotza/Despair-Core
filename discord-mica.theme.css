@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2
+ * @version 0.2.1
  * @description patch for discord mica for other themes
  */
 
@@ -50,15 +50,21 @@
 /*Accents*/
 .newMessagesBar__0f481, /*New messages bar at top*/
 .unreadPill__908e2.endCap__908e2, /*not read "new" msg text*/
-.mention__3b95d /*New at the server list*/
+.mention__3b95d, /*New at the server list*/
+.visual-refresh .content__908e2 /*badge at the middle with the date*/
 {
   background-color: var(--dark-accent) !important;
 }
 [id="---new-messages-bar"] /*new messages line on not read*/
 {
-  border-color: var(--dark-accent) solid !important;
+  border-color: var(--dark-accent) !important;
 }
-.unreadPillCapStroke__908e2
+.unreadPillCapStroke__908e2 /*color for the badge ate the end*/
 {
-  fill: var(--dark-accent) !important;
+  fill:  var(--dark-accent) !important;
+  color: var(--dark-accent) !important;
+}
+.content__908e2 /*date text at the middle of the unread alert*/
+{
+  color: var(--dark-button-font-color) !important;
 }

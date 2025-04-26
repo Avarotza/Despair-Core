@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.2
+ * @version 0.0.8.3
 */
 
 :root
@@ -26,15 +26,25 @@
   z-index: 998;
   left: -70px;
   background-color: var(--background-sidebar-color);
-  transition-property: opacity, left, width;
+  transition-property: all;
   transition-duration: .335s;
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 .visual-refresh [class^="sidebar_"]:hover [class^="sidebarList_"] {
-  left: 70px;
+  left: 64px; /* 70 for good spacing, 64 for close knit spacing*/
   opacity: 100%;
   width: 300px; /* Set your preferred width here (resize handle is disabled) */
+}
+
+/*Image banner fix*/
+.animatedContainer_f37cb1,
+.bannerImage_f37cb1
+{
+  position: relative !important;
+}
+.bannerImg_f37cb1
+{
+  width: 300px;
 }
 
 .visual-refresh [class*="guilds"] {

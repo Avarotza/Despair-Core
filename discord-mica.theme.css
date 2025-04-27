@@ -46,6 +46,17 @@
         }
     }
 }
+/*plugin reply fix*/
+.visual-refresh .form_f75fb0
+{
+  & .channelTextArea_f75fb0
+  {
+    .stackedBars__74017
+    {
+      background-color: #0000 !important;
+    }
+  }
+}
 /*Accents*/
 .newMessagesBar__0f481, /*New messages bar at top*/
 .unreadPill__908e2.endCap__908e2, /*not read "new" msg text*/

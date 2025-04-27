@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6
+ * @version 0.2.6.1
  * @description patch for discord mica for other themes
 */
 
@@ -47,6 +47,14 @@
         }
     }
 }
+/*Added image fix*/
+.visual-refresh .form_f75fb0
+{
+  .channelAttachmentArea_b77158 
+  {
+    background-color: #0000;
+  }
+}
 /*plugin reply fix*/
 .visual-refresh .form_f75fb0
 {
@@ -81,6 +89,7 @@
 [class^="expandedContainer__"],
 [class*="popover"],
 [class*="popoverReactionHoverBar_"],
+.visual-refresh .wrapper_f7ecac,
 .groupCollapsedContainer__9d98d,
 .groupContent__9d98d,
 .visual-refresh .collapseable__217b7,

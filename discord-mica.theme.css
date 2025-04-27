@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.5
+ * @version 0.2.6
  * @description patch for discord mica for other themes
 */
 
@@ -59,15 +59,18 @@
   }
 }
 /*user popout fix*/
+.outer_c0bea0.user-profile-popout,
 .outer_c0bea0.user-profile-popout.themeContainer_ce8328,
 .outer_c0bea0.user-profile-popout.container__5a2c6,
 .outer_ab8609::after,
 .outer_ab8609::before,
+.container_ab8609 .outer_ab8609,
 .inner_ab8609.clickable_ab8609,
 .container_fed6d3,
 .visual-refresh .wrapper__4e6ce,
 .visual-refresh .inspector_aeaaeb,
 .contentWrapper__9c62c,
+.visual-refresh .searchResultsWrap_a9e706,
 /*settings fix*/
 .visual-refresh .cardPrimary__73069,
 .visual-refresh .cardPrimary__73069.editable__73069,
@@ -76,9 +79,14 @@
 .visual-refresh .root__49fc1,
 .visual-refresh .vc-addon-card,
 [class^="expandedContainer__"],
+[class*="popover"],
+[class*="popoverReactionHoverBar_"],
 .groupCollapsedContainer__9d98d,
 .groupContent__9d98d,
-.visual-refresh .collapseable__217b7
+.visual-refresh .collapseable__217b7,
+.visual-refresh .messagesPopoutWrap__45690,
+.visual-refresh .container_fc561d,
+.visual-refresh .container__2692d
 {
   background-color: var(--dark-background-accent) !important;
 }
@@ -87,13 +95,24 @@
 :where(.visual-refresh) .menu_c1e9c4,
 .user-profile-sidebar,
 .visual-refresh .contentWrapper__08434,
-.container_cb32c7
+.container_cb32c7,
+.visual-refresh .searchResult__02a39,
+.visual-refresh .bottomBar__0f481,
+.visual-refresh .wrapper_f7ecac,
+.visual-refresh .header__45690,
+.visual-refresh .channelHeader__35a7e
 {
-  background-color: var(--dark-background-sidebar);
+  background-color: var(--dark-background-sidebar) !important;
 }
+/* buttonsInner__5126c popover_f84418 popoverReactionHoverBar_f84418 wrapper_f7ecac */
 .visual-refresh .footerSeparator__49fc1,
 .voiceWidgetContainer__9d98d,
-.container_d878e7.cardPrimary__73069.card__73069
+.container_d878e7.cardPrimary__73069.card__73069,
+.carouselModal_d3a6f0.root__49fc1,
+.visual-refresh .container_f369db,
+.inner_ab8609,
+.visual-refresh .messageContainer__95796,
+.visual-refresh .carouselModal_d3a6f0.root__49fc1
 {
   background-color: #0000 !important;
 }
@@ -102,7 +121,9 @@
 .wrapper__14245.packHeader_e94b8c,
 .wrapper__14245.header_c656ac,
 .visual-refresh .header_c0e32c,
-.visual-refresh .emojiPicker_c0e32c
+.visual-refresh .emojiPicker_c0e32c,
+.visual-refresh .messageGroupWrapper__45690,
+.visual-refresh .messages__1ccd1
 {
   background-color: #222222;/*bruh*/
 }
@@ -114,6 +135,10 @@
 .unicodeShortcut_b9ee0c
 {
   display: none !important;
+}
+.channelHeader__35a7e
+{
+  border-radius: 8px;
 }
 /*settings fix*/
 .editPencilIcon__2d060 path /*Pencil at config*/

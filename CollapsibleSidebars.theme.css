@@ -1,14 +1,48 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.6
+ * @version 0.0.8.7
 */
+
+@import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
 
 :root
 {
   --background-sidebar-color: var(--dark-background-sidebar);
   --background-userarea-color: var(--dark-status-panel);
   --status-panel: #0000 !important;
+
+  /*
+    * Spacing
+  */
+  --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+  --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+  --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+  /*
+    * Widths
+  */
+  --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+  --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+  --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+  /*
+    * Shape
+  */
+  --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+  /*
+    * Colours
+  */
+  --rs-online-color: #43b581; /* Colour for online status */
+  --rs-idle-color: #faa61a; /* Colour for idle status */
+  --rs-dnd-color: #f04747; /* Colour for dnd status */
+  --rs-offline-color: #636b75; /* Colour for offline status */
+  --rs-streaming-color: #643da7; /* Colour for streaming status */
+  --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+  --rs-self-speaking-color: #57d39b; /* Colour for speaking ring in the bottom left while in a voice chat/call */
+  --rs-phone-color: var(--rs-online-color); /* Colour of the ring & phone icon  */
+  /*
+    * Others
+  */
+  --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
 }
 
 /*Search bar radius fix*/
@@ -36,10 +70,16 @@
   width: 300px; /* Set your preferred width here (resize handle is disabled) */
 }
 
+.container_f37cb1.clickable_f37cb1, /*fixes the empty space after the image disappears*/
 .content__99f8c div[style="height: 84px;"] /*fuck you discord in specific fix*/
 {
   display: none !important; /*fixes the stupid bar below img/gif banners*/
 }
+.visual-refresh .container_f37cb1.clickable_f37cb1.hasBanner_f37cb1.bannerVisible_f37cb1
+{
+  display: block;
+}
+
 /*Image banner fix*/
 .animatedContainer_f37cb1,
 .bannerImage_f37cb1

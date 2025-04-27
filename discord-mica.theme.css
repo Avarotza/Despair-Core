@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.3
+ * @version 0.2.4
  * @description patch for discord mica for other themes
 */
 
@@ -103,7 +103,7 @@
 .visual-refresh .header_c0e32c,
 .visual-refresh .emojiPicker_c0e32c
 {
-  background-color: #161616;
+  background-color: #222222;/*bruh*/
 }
 .upsellContainer__5997d,
 [aria-label="Merch"],

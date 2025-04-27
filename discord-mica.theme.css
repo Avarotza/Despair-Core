@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.2
+ * @version 0.2.3
  * @description patch for discord mica for other themes
 */
 
@@ -63,6 +63,10 @@
 .outer_ab8609::after,
 .outer_ab8609::before,
 .inner_ab8609.clickable_ab8609,
+.container_fed6d3,
+.visual-refresh .wrapper__4e6ce,
+.visual-refresh .inspector_aeaaeb,
+.contentWrapper__9c62c,
 /*settings fix*/
 .visual-refresh .cardPrimary__73069,
 .visual-refresh .cardPrimary__73069.editable__73069,
@@ -80,7 +84,9 @@
 :where(.overlay_c0bea0),
 .visual-refresh .container__55c99,
 :where(.visual-refresh) .menu_c1e9c4,
-.user-profile-sidebar
+.user-profile-sidebar,
+.visual-refresh .contentWrapper__08434,
+.container_cb32c7
 {
   background-color: var(--dark-background-sidebar);
 }
@@ -90,10 +96,23 @@
 {
   background-color: #0000 !important;
 }
-.upsellContainer__5997d,
-[aria-label="Merch"]
+.visual-refresh .header_fed6d3,/*end me*/
+.visual-refresh .header__8ef02,
+.wrapper__14245.packHeader_e94b8c,
+.wrapper__14245.header_c656ac,
+.visual-refresh .header_c0e32c,
+.visual-refresh .emojiPicker_c0e32c
 {
-  display: none;
+  background-color: #161616;
+}
+.upsellContainer__5997d,
+[aria-label="Merch"],
+[aria-label="Send a gift"],
+.buttons__74017 div:nth-child(4),
+.standardStickerShortcut__3ad28,
+.unicodeShortcut_b9ee0c
+{
+  display: none !important;
 }
 /*settings fix*/
 .editPencilIcon__2d060 path /*Pencil at config*/

@@ -1,9 +1,9 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.1
+ * @version 0.2.2
  * @description patch for discord mica for other themes
- */
+*/
 
  @import url("https://discord-mica.pages.dev/src/main.css");
 
@@ -57,11 +57,64 @@
     }
   }
 }
+/*user popout fix*/
+.outer_c0bea0.user-profile-popout.themeContainer_ce8328,
+.outer_c0bea0.user-profile-popout.container__5a2c6,
+.outer_ab8609::after,
+.outer_ab8609::before,
+.inner_ab8609.clickable_ab8609,
+/*settings fix*/
+.visual-refresh .cardPrimary__73069,
+.visual-refresh .cardPrimary__73069.editable__73069,
+.authedAppV2__50a54,
+.connectContainer_c7f964,
+.visual-refresh .root__49fc1,
+.visual-refresh .vc-addon-card,
+[class^="expandedContainer__"],
+.groupCollapsedContainer__9d98d,
+.groupContent__9d98d,
+.visual-refresh .collapseable__217b7
+{
+  background-color: var(--dark-background-accent) !important;
+}
+:where(.overlay_c0bea0),
+.visual-refresh .container__55c99,
+:where(.visual-refresh) .menu_c1e9c4,
+.user-profile-sidebar
+{
+  background-color: var(--dark-background-sidebar);
+}
+.visual-refresh .footerSeparator__49fc1,
+.voiceWidgetContainer__9d98d,
+.container_d878e7.cardPrimary__73069.card__73069
+{
+  background-color: #0000 !important;
+}
+.upsellContainer__5997d,
+[aria-label="Merch"]
+{
+  display: none;
+}
+/*settings fix*/
+.editPencilIcon__2d060 path /*Pencil at config*/
+{
+ fill: var(--dark-accent-font-color); 
+}
+.bgShade__6d791
+{
+  background-color: var(--dark-button);
+}
+.lookFilled__201d5.colorBrand__201d5
+{
+  color: var(--dark-button-font-color) !important;
+}
 /*Accents*/
 .newMessagesBar__0f481, /*New messages bar at top*/
 .unreadPill__908e2.endCap__908e2, /*not read "new" msg text*/
 .mention__3b95d, /*New at the server list*/
-.visual-refresh .content__908e2 /*badge at the middle with the date*/
+.visual-refresh .content__908e2, /*badge at the middle with the date*/
+[class^="improved__"]:after, h3[class^="improved__"]:after, /*whats new*/
+.newBadge__25879 /*new config badge*/
 {
   background-color: var(--dark-accent) !important;
 }
@@ -74,7 +127,11 @@
   fill:  var(--dark-accent) !important;
   color: var(--dark-accent) !important;
 }
-.content__908e2 /*date text at the middle of the unread alert*/
+.content__908e2/*date text at the middle of the unread alert*/
 {
   color: var(--dark-button-font-color) !important;
+}
+[class^="improved__"], h3[class^="improved__"] /*whats new*/
+{
+  color: var(--dark-accent);
 }

@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.4
+ * @version 0.2.5
  * @description patch for discord mica for other themes
 */
 
@@ -20,6 +20,7 @@
   --dark-background-accent: rgba(50,50,50,0.9);
   --dark-background-sidebar: rgba(31, 31, 31, 0.7);
   --dark-status-panel: rgba( 8, 8, 8, 0.8);
+  --text-link: var(--dark-accent) !important;
 
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */

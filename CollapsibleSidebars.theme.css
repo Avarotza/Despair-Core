@@ -70,27 +70,28 @@
   width: 300px; /* Set your preferred width here (resize handle is disabled) */
 }
 
-.container_f37cb1.clickable_f37cb1, /*fixes the empty space after the image disappears*/
+/*fixes the empty space after the image disappears*/
+/*.container_f37cb1.clickable_f37cb1,
 .content__99f8c div[style="height: 84px;"] /*fuck you discord in specific fix*/
-{
-  display: none !important; /*fixes the stupid bar below img/gif banners*/
-}
+/*{
+/*   display: none !important; */ /*fixes the stupid bar below img/gif banners*/
+/*}*/
 .visual-refresh .container_f37cb1.clickable_f37cb1.hasBanner_f37cb1.bannerVisible_f37cb1
 {
   display: block;
 }
 
 /*Image banner fix*/
-.animatedContainer_f37cb1,
+/* /* .animatedContainer_f37cb1,
 .bannerImage_f37cb1
 {
   position: relative !important;
-}
+} */
 .visual-refresh div.bannerImage_f37cb1 img.bannerImg_f37cb1
 {
   width: 300px !important;
 }
-
+ */
 .visual-refresh [class*="guilds"] {
   z-index: 999; /* So the sidebar pops from behind the servers */
 }
@@ -113,9 +114,10 @@
 {
   transition: all .325s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: #0000 !important;
-    border-radius: 25px 25px 0 0 !important; /*Might break something*/
+  border-radius: 25px 25px 0 0 !important; /*Might break something*/
   padding: 8px 8px 12px 8px;
   border-bottom-width: 0px;
+  height: 0;
 }
 /*Gaming panel stuff*/
 /* .body__5dec7
@@ -166,9 +168,11 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
 }
 .visual-refresh .panel__5dec7 img /*current game panel img*/
 {
+  opacity: 0;
+  pointer-events: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 0;
+  height: 0;
   margin: 0 0 0 0;
   transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -266,10 +270,12 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
 .visual-refresh [class^="panels_"]:hover .panel__5dec7 /*Hover of the current game panel*/
 {
   padding: 8px 8px 12px 8px;
+  height: auto;
 }
 .visual-refresh [class^="panels_"]:hover .gameWrapper__5dec7,
 .visual-refresh [class^="panels_"]:hover .panel__5dec7 img /* Hover of the current game img*/
 {
+  opacity: 1;
   margin: 5px 0 0 0;
   border-radius: 8px;
   width: 32px;
@@ -314,10 +320,10 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
   background-color: #0000 !important;
 }
 
-.visual-refresh .panels_c48ade:hover [class^="container__"] [class^="buttons__"] {
- 
-   scale: 100%;
-   opacity: 100%;
+.visual-refresh .panels_c48ade:hover [class^="container__"] [class^="buttons__"]
+{
+  scale: 100%;
+  opacity: 100%;
 }
 
 .visual-refresh [class^="sidebarResizeHandle_"] {

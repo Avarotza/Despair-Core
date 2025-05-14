@@ -110,6 +110,7 @@
 .visual-refresh .wrapper_f7ecac,
 .visual-refresh .header__45690,
 .visual-refresh .channelHeader__35a7e
+/* .visual-refresh .container__551b0 */
 {
   background-color: var(--dark-background-sidebar) !important;
 }
@@ -121,7 +122,8 @@
 .visual-refresh .container_f369db,
 .inner_ab8609,
 .visual-refresh .messageContainer__95796,
-.visual-refresh .carouselModal_d3a6f0.root__49fc1
+.visual-refresh .carouselModal_d3a6f0.root__49fc1,
+.visual-refresh .scroller__23746
 {
   background-color: #0000 !important;
 }

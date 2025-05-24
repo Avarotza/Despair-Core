@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.7
+ * @version 0.0.8.8
 */
 
 @import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
@@ -91,7 +91,6 @@
 {
   width: 300px !important;
 }
- */
 .visual-refresh [class*="guilds"] {
   z-index: 999; /* So the sidebar pops from behind the servers */
 }
@@ -229,7 +228,10 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
   background: linear-gradient(90deg, #434343b6 0%, #0000009c 100%);
   background-blend-mode: soft-light,screen;
 }
-
+.visual-refresh .wrapper__0d616 /*game Ad*/
+{
+  display: none;
+}
 /*-- Hover --*/
 .visual-refresh [class^="panels_"]:hover /*Hover of the user Area*/
 { 
@@ -257,7 +259,8 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
 .visual-refresh [class^="panels_"]:hover .actions__4cd01, /* unpill stuff */
 .visual-refresh [class^="panels_"]:hover .info__8c6c2, /* unpill stuff */
 .visual-refresh [class^="panels_"]:hover .info__5dec7,
-.visual-refresh [class^="panels_"]:hover .icon_a629d4
+.visual-refresh [class^="panels_"]:hover .icon_a629d4,
+.visual-refresh [class^="panels_"]:hover .wrapper__0d616
 {
   display: flex !important;
 }
@@ -302,6 +305,14 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
 .visual-refresh [class^="panels_"]::after /*bg removal of the image*/
 { 
   padding-left: 20px;
+}
+.visual-refresh [class^="panels_"] .wrapper__0d616.wrapperVisible__0d616:hover
+{ 
+  height: 260px !important;
+}
+.visual-refresh [class^="panels_"] .content__60686.contentExpanded__636a2
+{ 
+  transform: translateY(calc(0% + 0px)) !important;
 }
 .visual-refresh [class^="panels_"] [class^="container__"] [class^="buttons__"] {
 

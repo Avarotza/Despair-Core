@@ -1,10 +1,10 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6.2
+ * @version 0.2.6.3
  * @description patch for discord mica for other themes
 */
-
+ @import url("https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css");
  @import url("https://discord-mica.pages.dev/src/main.css");
 
  :root {

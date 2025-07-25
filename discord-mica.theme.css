@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6.3
+ * @version 0.2.6.4
  * @description patch for discord mica for other themes
 */
  @import url("https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css");
@@ -21,7 +21,8 @@
   --dark-background-sidebar: rgba(31, 31, 31, 0.7);
   --dark-status-panel: rgba( 8, 8, 8, 0.8);
   --text-link: var(--dark-accent) !important;
-
+  --dark-accent: var(--dark-accent) !important;
+  --text-link: var(--dark-accent) !important;
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */
   --title-bar-icon: flex; /* Set to none to remove icons */
@@ -170,6 +171,7 @@
 .mention__3b95d, /*New at the server list*/
 .visual-refresh .content__908e2, /*badge at the middle with the date*/
 [class^="improved__"]:after, h3[class^="improved__"]:after, /*whats new*/
+.numberBadge__2b1f5.base__2b1f5.eyebrow__2b1f5.baseShapeRound__2b1f5, /*unread circles*/
 .newBadge__25879 /*new config badge*/
 {
   background-color: var(--dark-accent) !important;

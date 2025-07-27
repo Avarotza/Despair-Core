@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.8
+ * @version 0.0.8.9
 */
 
 @import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
@@ -131,10 +131,6 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
   height: 30px;
   width: 30px;
 } */
-.info__5dec7
-{
-  display: none;
-}
 .gameWrapper__5dec7
 {
   margin-top: 2px;
@@ -182,7 +178,9 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
 .container_e131a9,  /*button hider*/
 .actions__4cd01,    /*button hider*/
 .info__8c6c2,        /*button hider*/
-.badge_a629d4
+.badge_a629d4,
+.info__5dec7,
+.gameIcon__8c6c2
 {
   display: none !important;
   
@@ -260,7 +258,8 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
 .visual-refresh [class^="panels_"]:hover .info__8c6c2, /* unpill stuff */
 .visual-refresh [class^="panels_"]:hover .info__5dec7,
 .visual-refresh [class^="panels_"]:hover .icon_a629d4,
-.visual-refresh [class^="panels_"]:hover .wrapper__0d616
+.visual-refresh [class^="panels_"]:hover .wrapper__0d616,
+.visual-refresh [class^="panels_"]:hover .gameIcon__8c6c2
 {
   display: flex !important;
 }

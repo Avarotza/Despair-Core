@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6.4
+ * @version 0.2.6.5
  * @description patch for discord mica for other themes
 */
  @import url("https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css");
@@ -124,7 +124,8 @@
 .inner_ab8609,
 .visual-refresh .messageContainer__95796,
 .visual-refresh .carouselModal_d3a6f0.root__49fc1,
-.visual-refresh .scroller__23746
+.visual-refresh .scroller__23746,
+.lookFilled__201d5.colorPrimary__201d5
 {
   background-color: #0000 !important;
 }

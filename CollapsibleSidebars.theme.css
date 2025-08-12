@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.9
+ * @version 0.0.8.10
 */
 
 @import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
@@ -52,13 +52,14 @@
 }
 /* Collapsible sidebars */
 .visual-refresh [class^="sidebarList_"] {
+  container-type: unset;
   position: fixed; /* Remove if you don't want it to float */
   width: 150px; /* Set to 0px if you don't want it to float */
-  container-type: unset;
+  margin-top: 46px;
   opacity: 0%;
   height: 100%;
-  z-index: 998;
   left: -70px;
+  z-index: 998;
   background-color: var(--background-sidebar-color);
   transition-property: all;
   transition-duration: .335s;

@@ -1,7 +1,7 @@
 /**
  * @name Discord Simple Fixes
  * @author avarotza
- * @version 0.0.7
+ * @version 0.0.7.1
  * @invite D9uwnFnqmd
  * @description Simple fixes from the Vencord Server.
 */
@@ -471,4 +471,21 @@ margin-left: -18%;
 .contentRegionScroller__23e6b.contentRegionShownSidebar__23e6b.auto_d125d2.scrollerBase_d125d2
 {
   justify-content: center;
+}
+/*Radial status quickswitcher fix*/
+#app-mount .contentDefault__71961 .wrapper__44b0c foreignObject
+{
+    x:0;
+    y:0;
+    width: 25px;
+    height: 25px;
+}
+
+.contentDefault__71961 .iconContainer__71961
+{
+    margin-right: 8px;
+}
+.iconContainer__71961 .wrapper__44b0c
+{
+    margin-top: -8px;
 }

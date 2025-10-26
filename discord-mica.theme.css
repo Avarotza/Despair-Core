@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6.6
+ * @version 0.2.6.7
  * @description patch for discord mica for other themes
 */
  @import url("https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css");
@@ -98,7 +98,9 @@
 .visual-refresh .container__2692d,
 .option__3f413[aria-selected=true]:not(.option__3f413.multi__3f413),
 .row__0624f.marginBottom8_fd297e,
-.background__1fed1
+.background__1fed1,
+.card__5cea9,
+.box_f8c98c
 {
   background-color: var(--dark-background-accent) !important;
 }
@@ -113,7 +115,8 @@
 .visual-refresh .wrapper_f7ecac,
 .visual-refresh .header__45690,
 .popout__3f413,
-.container_fed6d3
+.container_fed6d3,
+.container__8a031
 /* .visual-refresh .container__551b0 */
 {
   background-color: var(--dark-background-sidebar) !important;
@@ -139,7 +142,8 @@
 .fieldList__1fed1,
 .visual-refresh .channelHeader__35a7e,
 .visual-refresh .messages__1ccd1,
-.visual-refresh .messagesPopoutWrap__45690
+.visual-refresh .messagesPopoutWrap__45690,
+.quickswitcher_ac6cb0
 {
   background-color: #0000 !important;
 }
@@ -150,8 +154,7 @@
 .scroller_affa7e.thin_d125d2.scrollerBase_d125d2,
 .embedFull__623de,
 .content_fed6d3,
-.accountProfileCard__1fed1,
-.box_f8c98c
+.accountProfileCard__1fed1
 {
   background-color: #222222;/*bruh*/
 }
@@ -198,7 +201,9 @@
 .lookFilled__201d5.colorBrand__201d5, /*Generic button*/
 .actionMenuButton_d84e0f, /*... button*/
 .newBadge__105ba, /*new badge*/
-.vc-addon-badge /*vencord new badge*/
+.vc-addon-badge,/*vencord new badge*/
+.result__71961[aria-selected=true], /*quickswitcher selected*/
+.loadMoreButton__5cea9 /*Load more button*/
 {
   background-color: var(--dark-accent) !important;
 }
@@ -221,7 +226,10 @@ path[fill="var(--text-brand)"]
 .primary_a22cb0, /*default button*/
 .lookFilled__201d5.colorBrand__201d5, /*Generic button*/
 .actionMenuButton_d84e0f, /*... button*/
-.lookFilled__201d5.colorBrand__201d5
+.lookFilled__201d5.colorBrand__201d5,
+.result__71961[aria-selected=true] .name__71961 .match__71961, .result__71961[aria-selected=true] .note__71961, .result__71961[aria-selected=true] .misc__71961, /*quickswitcher selected*/
+.loadMoreButton__5cea9, /*Load more button*/
+.vc-special-title, .vc-special-text /*vencord*/
 {
   color: var(--dark-button-font-color) !important;
 }
@@ -248,7 +256,8 @@ path[fill="var(--text-brand)"]
   outline: 1px solid var(--dark-accent);
 }
 .editPencilIcon__2d060 path,
-path[fill="var(--interactive-normal)"]
+path[fill="var(--interactive-normal)"],
+.iconContainer__71961 path[fill="currentColor"]
 {
   fill:  var(--dark-button-font-color) !important;
   color: var(--dark-button-font-color) !important;
@@ -256,34 +265,39 @@ path[fill="var(--interactive-normal)"]
 .primary_a22cb0:hover,
 .lookFilled__201d5:hover.colorBrand__201d5,/*button hover*/
 .actionMenuButton_d84e0f:hover,
-.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover,
+.result__71961[aria-selected=true]:hover,
+.lookFilled__201d5.colorPrimary__201d5:hover,
+.loadMoreButton__5cea9 /*Load more button*/
 {
   background-color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / 1) !important;
 }
 .primary_a22cb0:active,
 .lookFilled__201d5:active.colorBrand__201d5,/*button hover*/
 .actionMenuButton_d84e0f:active,
-.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:active
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:active,
+.lookFilled__201d5.colorPrimary__201d5:active,
+.loadMoreButton__5cea9 /*Load more button*/
 {
-    background-color: hsla(from var(--dark-accent) h calc(s - 40) calc(l - 40) / 1) !important;
+  background-color: hsla(from var(--dark-accent) h calc(s - 40) calc(l - 40) / 1) !important;
 }
 .themed_aa8da2.item_aa8da2
 {
-    color: rgb(216, 216, 216);
+  color: rgb(216, 216, 216);
 }
 .item_aa8da2.selected_aa8da2.themed_aa8da2
 {
-    color: var(--dark-button-font-color) !important;
+  color: var(--dark-button-font-color) !important;
 }
 
 .eyebrow_cf4812.headerText_aa8da2
 {
-    color: rgb(216, 216, 216);
-    text-decoration: underline !important;
+  color: rgb(216, 216, 216);
+  text-decoration: underline !important;
 }
 .radioIndicatorChecked__88a69 .refreshIconStroke__88a69
 {
-    stroke: var(--dark-accent);
+  stroke: var(--dark-accent);
 }
 .collapseButton__427f0
 {
@@ -295,5 +309,5 @@ path[fill="var(--interactive-normal)"]
 }
 .top_aa8da2 .item_aa8da2.brand_aa8da2
 {
-    --selected-tab-item-color: var(--dark-accent);
+  --selected-tab-item-color: var(--dark-accent);
 }

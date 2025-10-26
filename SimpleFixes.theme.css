@@ -1,7 +1,7 @@
 /**
  * @name Discord Simple Fixes
  * @author avarotza
- * @version 0.0.6
+ * @version 0.0.7
  * @invite D9uwnFnqmd
  * @description Simple fixes from the Vencord Server.
 */
@@ -9,7 +9,8 @@
 @import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
 @import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
 
-:root {
+:root
+{
     /* change padding of the bar */
      --rscb-chat-box-padding: 7px; /* default is 8px for alignment */
      /* controls the vertical position of the window buttons */
@@ -27,18 +28,25 @@
 }
 
 /* Hide nameplates */
-[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
-[class*="dm_"]:has([class*="linkPlated_"]) {
+[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"])
+{ display: none; }
+[class*="dm_"]:has([class*="linkPlated_"])
+{
     & [class*="linkPlated_"] { padding-right: var(--space-16); }
-    & [class*="closeButtonPlated_"] {
+    & [class*="closeButtonPlated_"]
+    {
         opacity: 0.7;
-        &:hover { opacity: 1; }
-        & [class^="innerCloseButtonPlated"] {
+        &:hover
+        { opacity: 1; }
+        & [class^="innerCloseButtonPlated"]
+        {
             opacity: unset; 
             background: none;
-            & svg {
+            & svg
+            {
                 color: inherit;
-                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
+                &:is(:hover, :focus-within)
+                { color: var(--interactive-hover); }
             }
         }
     }
@@ -46,67 +54,83 @@
 
 /* Hide Activity Status*/
 [class*='membersGroup']:has([role=button]),
-[class*='member'] [class*='container']:has([class*='badges']) {
+[class*='member'] [class*='container']:has([class*='badges'])
+{
   display: none;
 }
 
-nav.guilds_c48ade {
+nav.guilds_c48ade
+{
   margin-bottom: 0 !important;
 }
-.sidebar_c48ade:after {
+.sidebar_c48ade:after
+{
   display: none;
 }
-
+.premiumTrialBadge_e4ef22.premiumTrialAcknowledgedBadge_e4ef22, /*Nitro bullshit begone*/
+.floatingNitroUpsell__39749,
+.container__8279f,
+.premiumFeatureBorder__65c15.featureBorder__65c15.tryItOutSection__9d295
+{
+  display: none !important;
+}
 /* Colored role pills*/
-.role_dfa8b6.pill_dfa8b6 {
-    position: relative;
-    background: none;
-    border: none;
-    padding-left: 28px;
+.role_dfa8b6.pill_dfa8b6
+{
+  position: relative;
+  background: none;
+  border: none;
+  padding-left: 28px;
 }
-.role_dfa8b6.pill_dfa8b6 > span {
-    z-index: 1;
+.role_dfa8b6.pill_dfa8b6 > span
+{
+  z-index: 1;
 }
-.role_dfa8b6.pill_dfa8b6 .roleRemoveButton_dfa8b6 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: 0 !important;
+.role_dfa8b6.pill_dfa8b6 .roleRemoveButton_dfa8b6
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0 !important;
 }
-.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569 {
+.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569
+{
     margin: 6px 8px;
 }
-.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569::before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: inherit;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    border-radius: var(--radius-xs);
-    filter: brightness(1.1);
-    opacity: 0.25;
+.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569::before
+{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: var(--radius-xs);
+  filter: brightness(1.1);
+  opacity: 0.25;
 }
 
 /* Vencord loading */
-.content_a2f514 {
-    display: flex;
-    flex-direction: column;
-    > .spinner_a2f514 { display: none }
-    &:before {
-        display: block;
-        height: 128px;
-        position: relative;
-        content: var(--loading-panel);
-        image-rendering: pixelated;
-         align-content: center;
-         scale: 3.125;
-         margin-bottom: 96px;
-    }
+.content_a2f514
+{
+  display: flex;
+  flex-direction: column;
+  > .spinner_a2f514 { display: none }
+  &:before
+  {
+    display: block;
+    height: 128px;
+    position: relative;
+    content: var(--loading-panel);
+    image-rendering: pixelated;
+    align-content: center;
+    scale: 3.125;
+    margin-bottom: 96px;
+  }
 }
 
 /*Search bar fix*/
@@ -121,13 +145,11 @@ nav.guilds_c48ade {
   {
     opacity: 1 !important;
   }
-
   .visual-refresh .searchBar__97492
   {
     width: 28px;
     border: 0;
   }
-
   .search__97492.open__97492.focused__97492 .searchBar__97492,
   .search__49676 .search__97492.open__97492  .searchBar__97492
   {
@@ -144,54 +166,309 @@ nav.guilds_c48ade {
   display: none;
 }
 
-/* Collapsible chat buttons/
-[class^=chat_] [class*=textArea_] {
-  margin-right: 32px;
-  +[class^=buttons_] {
+/*spinny guild icons*/
+.chipletContainerInner__10651 > .text__10651 > .tagText__10651
+{
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  will-change: max-width, margin;
+  transition: max-width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.chipletContainerInner__10651:hover > .text__10651 > .tagText__10651
+{
+  max-width: 20ch;
+  margin-right: .3ch;
+  transition-delay: 0.08s;
+}
+.chipletContainerInner__10651 > .text__10651 > img.badge__10651
+{
+  margin-right: 0;
+  transition:   transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.chipletContainerInner__10651:hover > span > img.badge__10651
+{
+  transform: rotateZ(360deg);
+  margin-right: .6ch;
+  transition-delay: 0.08s;
+}
+.chipletContainerInner__10651
+{
+  position: relative;
+  display: inline-block;
+  background-color: var(--background-mod-subtle);
+  padding: 0 2px;
+}
+.chipletContainerInner__10651:hover ~ .tagText__10651
+{
+  display: block;
+  clear: both;
+  margin-top: .5ch;
+}
+/* Spotify background album cover*/
+#vc-spotify-player
+{
+  --blur-amount: 4px; 
+  --normal-bg-colour: var(--bg-overlay-floating, var(--background-base-low, var(--background-secondary-alt)));
+
+  position: relative;
+  background: linear-gradient(to bottom, transparent 0%, var(--normal-bg-colour) 100%) !important;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  > *
+  {
+    filter: drop-shadow(0 0 10px var(--normal-bg-colour));
+  }
+}
+#vc-spotify-player:hover
+{
+  --blur-amount: 0px;
+}
+#vc-spotify-player::before,
+#vc-spotify-player::after
+{
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-out;
+}
+#vc-spotify-player::before
+{
+  background: var(--vc-spotify-track-image);
+  background-position: center top; 
+  background-size: cover; 
+  opacity: 0.5;
+}
+#vc-spotify-player:hover::before
+{
+  opacity: 0.7;
+}
+#vc-spotify-player::after
+{
+  backdrop-filter: blur(var(--blur-amount));
+}
+#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"]
+{
+  background-color: white !important;
+  background: var(--vc-spotify-track-image);
+  background-size: 1px 100%;
+}
+#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"]::before
+{
+  content: "";
+  position: fixed;
+  height: inherit;
+  width: inherit;
+  top: inherit;
+  left: inherit;
+  border-radius: 4px 0 0 4px;
+  backdrop-filter: blur(10px) saturate(4) brightness(1.6);
+}
+/*Fullscreen settings --Unstable--*/
+/* .sidebarRegion__23e6b
+{
+  flex: none;
+}
+.contentColumn__23e6b
+{
+  max-width: 100%;
+} */
+
+/* bland profiles */
+[class^="avatarDecoration"],
+[class^="profileEffects"]
+{
+  display: none;
+}
+[class$="custom-theme-background custom-user-profile-theme"]
+{
+  --profile-gradient-primary-color: var(--background-surface-high) !important;
+  --profile-gradient-secondary-color: var(--background-surface-high) !important;
+  --profile-gradient-overlay-color: rgba(0, 0, 0, 0) !important;
+  --profile-gradient-button-color: var(--background-mod-subtle) !important;
+  --theme-base-color-light-hsl: unset !important;
+  --theme-base-color-light: unset !important;
+  --theme-text-color-light: unset !important;
+  --theme-base-color-dark-hsl: unset !important;
+  --theme-base-color-dark: unset !important;
+  --theme-text-color-dark: unset !important;
+  --theme-base-color-amount: unset !important;
+  --theme-text-color-amount: unset !important;
+}
+  /* nameplates */
+div[class*="nameplated_"] > div[class^="container"][style^="background"],/* for member list */
+li[class*="dm_"][role="listitem"] > div > div[class^="container"][style^="background"]/* for dm list */
+{
+  display: none;
+}
+span[class*="usernameGradient_"] /* remove gradient glow in chat and member list */
+{
+  color: color-mix(in lab, var(--custom-gradient-color-1), var(--custom-gradient-color-2));
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+span[class^="nameGlow"]
+{
+  display: none;
+}
+/*better vencord shiki code snippet*/
+.vc-shiki-root,
+.vc-shiki-container
+{
+  border: 1px solid #00000000 !important;
+  border-radius: 20px;
+  background-color: color-mix(in srgb, var(--background-base-lowest), transparent 50%) !important;
+  color: var(--text-default) !important;
+}
+
+.vc-shiki-lang
+{
+  top: -26px;
+  right: 26px;
+  color: transparent;
+  position: absolute;
+  background: transparent;
+  padding: var(--space-xxs) var(--radius-xs);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+
+  &:hover
+  {
+    color: var(--text-default);
+    background: var(--background-base-low);
+    border-color: var(--border-subtle);
+  }
+}
+
+.vc-shiki-devicon
+{
     position: absolute;
-    right: 0;
-    background-color: hsl(var(--neutral-81) / 0.5);
-    backdrop-filter: blur(3px);
-    border-radius: 8px;
-    &:not(:hover)>:not(:last-child) {
-      display: none;
+    bottom: -24px;
+    left: 25%;
+}
+
+.vc-shiki-code,
+.vc-shiki-container
+{
+    overflow: visible !important;
+}
+
+.vc-shiki-table>.vc-shiki-table-row:first-of-type .vc-shiki-table-cell
+{
+    padding-right: 22px;
+}
+
+.vc-shiki-btns
+{
+  top: 6px;
+  right: 7px;
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.vc-shiki-btn
+{
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-xs) !important;
+  font-size: 0px;
+  background: transparent !important;
+  color: var(--brand-300) !important;
+  &::after
+  {
+      position: relative;
+      top: -11px;
+      left: -3px;
+      content: "⎘";
+      font-size: 16px;
+  }
+  &:hover
+  {
+    background: color-mix(in srgb, var(--brand-500), transparent 75%) !important;
+
+    &::before
+    {
+      position: absolute;
+      top: -30px;
+      right: -6px;
+      content: "Copy";
+      font-size: 13px;
+      padding: var(--space-xxs) var(--radius-xs);
+      border-radius: var(--radius-sm);
+      color: var(--text-default);
+      background: var(--background-base-low);
+      border: 1px solid var(--border-subtle);
+    }
+  }
+  &:focus
+  {
+    background: color-mix(in srgb, var(--brand-500), transparent 90%) !important;
+    color: var(--brand-500) !important;
+
+    &::after
+    {
+        content: "⎗";
+    }
+
+    &::before
+    {
+      position: absolute;
+      top: -30px;
+      right: -14px;
+      content: "Copied!";
+      font-size: 13px;
+      padding: var(--space-xxs) var(--radius-xs);
+      border-radius: var(--radius-sm);
+      color: var(--text-default);
+      background: var(--background-base-low);
+      border: 1px solid var(--border-subtle);
     }
   }
 }
-
-
-/*Old discord User area/
-.visual-refresh section[aria-label="User area"] {
-    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);;
-    left: var(--custom-guild-list-width);
-    bottom: 0px;
-    border-radius: 0px;
-    border: none;
+/*message counter fix*/
+.messageContent_c19a55, .textContainer__4d95d
+{
+  overflow: visible!important;
 }
-.visual-refresh nav:has([data-list-id="guildsnav"]) {
-  margin-bottom: unset;
+/*Discord nitro char limit delete*/
+.root__6c5a1.upsell__795fb
+{
+  display: none;
 }
-
-/*Relative user area/
-.visual-refresh section.panels_c48ade {
-  left: calc(var(--custom-guild-list-width) + var(--space-xs));
-  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
-  box-sizing: content-box;
-  .actionButtons_e131a9 button {
-    padding: 0;
-  }
-  /* GameActivityToggle Fix (delete if you don't use) */
-  /* .container__37e49 {
-    padding: var(--space-xxs);
-    gap: var(--space-4);
-    >.buttons__37e49 {
-      gap: 0;
-    }
-    >.avatarWrapper__37e49 {
-      min-width: 32px !important;
-      >.avatar__37e49 {
-        scale: 0.9;
-      }
-    }
-  } 
-}*/
+/*config menu margin and padding*/
+.sidebarRegion__23e6b
+{
+  flex: none;
+}
+.contentRegion__23e6b
+{
+  max-width: 100%;
+  min-height: 100%;
+  overflow-y: hidden;
+  scrollbar-color: var(--dark-button-border) #0000;
+  scrollbar-width: thin;  
+  --selected-tab-item-color:(--dark-accent);
+}
+.accountProfileCard__1fed1 .mask__68edb mask circle
+{
+  display: none;
+}
+.accountProfileCard__1fed1 .avatar__1fed1
+{
+position: relative;
+margin-top: -116px;
+margin-left: -18%;
+}
+.contentRegionScroller__23e6b.contentRegionShownSidebar__23e6b.auto_d125d2.scrollerBase_d125d2
+{
+  justify-content: center;
+}

@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6.5
+ * @version 0.2.6.6
  * @description patch for discord mica for other themes
 */
  @import url("https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css");
@@ -21,8 +21,9 @@
   --dark-background-sidebar: rgba(31, 31, 31, 0.7);
   --dark-status-panel: rgba( 8, 8, 8, 0.8);
   --text-link: var(--dark-accent) !important;
-  --dark-accent: var(--dark-accent) !important;
-  --text-link: var(--dark-accent) !important;
+  --background-message-highlight: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / 0.16);
+  --text-brand: var(--dark-accent);
+  --control-background-primary-default: var(--dark-accent);
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */
   --title-bar-icon: flex; /* Set to none to remove icons */
@@ -75,7 +76,6 @@
 .outer_ab8609::before,
 .container_ab8609 .outer_ab8609,
 .inner_ab8609.clickable_ab8609,
-.container_fed6d3,
 .visual-refresh .wrapper__4e6ce,
 .visual-refresh .inspector_aeaaeb,
 .contentWrapper__9c62c,
@@ -94,9 +94,11 @@
 .groupCollapsedContainer__9d98d,
 .groupContent__9d98d,
 .visual-refresh .collapseable__217b7,
-.visual-refresh .messagesPopoutWrap__45690,
 .visual-refresh .container_fc561d,
-.visual-refresh .container__2692d
+.visual-refresh .container__2692d,
+.option__3f413[aria-selected=true]:not(.option__3f413.multi__3f413),
+.row__0624f.marginBottom8_fd297e,
+.background__1fed1
 {
   background-color: var(--dark-background-accent) !important;
 }
@@ -110,7 +112,8 @@
 .visual-refresh .bottomBar__0f481,
 .visual-refresh .wrapper_f7ecac,
 .visual-refresh .header__45690,
-.visual-refresh .channelHeader__35a7e
+.popout__3f413,
+.container_fed6d3
 /* .visual-refresh .container__551b0 */
 {
   background-color: var(--dark-background-sidebar) !important;
@@ -125,31 +128,45 @@
 .visual-refresh .messageContainer__95796,
 .visual-refresh .carouselModal_d3a6f0.root__49fc1,
 .visual-refresh .scroller__23746,
-.lookFilled__201d5.colorPrimary__201d5
+.lookFilled__201d5.colorPrimary__201d5,
+.visual-refresh .header_c0e32c,
+.panels_c48ade, .container__37e49,
+.visual-refresh .collapseable__217b7,
+.visual-refresh .header__8ef02,
+.visual-refresh .header_fed6d3,
+.visual-refresh .emojiPicker_c0e32c,
+.wrapper_c0e32c,
+.fieldList__1fed1,
+.visual-refresh .channelHeader__35a7e,
+.visual-refresh .messages__1ccd1,
+.visual-refresh .messagesPopoutWrap__45690
 {
   background-color: #0000 !important;
 }
-.visual-refresh .header_fed6d3,/*end me*/
-.visual-refresh .header__8ef02,
+/*end me*/
 .wrapper__14245.packHeader_e94b8c,
 .wrapper__14245.header_c656ac,
-.visual-refresh .header_c0e32c,
-.visual-refresh .emojiPicker_c0e32c,
 .visual-refresh .messageGroupWrapper__45690,
-.visual-refresh .messages__1ccd1
+.scroller_affa7e.thin_d125d2.scrollerBase_d125d2,
+.embedFull__623de,
+.content_fed6d3,
+.accountProfileCard__1fed1,
+.box_f8c98c
 {
   background-color: #222222;/*bruh*/
 }
 .upsellContainer__5997d,
 [aria-label="Merch"],
 [aria-label="Send a gift"],
-.buttons__74017 div:nth-child(4),
+.buttons__74017 div:nth-child(3),
 .standardStickerShortcut__3ad28,
 .unicodeShortcut_b9ee0c
 {
   display: none !important;
 }
-.channelHeader__35a7e
+.channelHeader__35a7e,
+.embedFull__623de.embed__623de.markup__75297.justifyAuto__623de
+.actionMenuButton_d84e0f
 {
   border-radius: 8px;
 }
@@ -163,6 +180,7 @@
   background-color: var(--dark-button);
 }
 .lookFilled__201d5.colorBrand__201d5
+.actionMenuButton_d84e0f
 {
   color: var(--dark-button-font-color) !important;
 }
@@ -173,24 +191,109 @@
 .visual-refresh .content__908e2, /*badge at the middle with the date*/
 [class^="improved__"]:after, h3[class^="improved__"]:after, /*whats new*/
 .numberBadge__2b1f5.base__2b1f5.eyebrow__2b1f5.baseShapeRound__2b1f5, /*unread circles*/
-.newBadge__25879 /*new config badge*/
+.newBadge__25879, /*new config badge*/
+.replying__5126c:before, /*reply color*/
+.mentioned__5126c:before, /*mentioned border color*/
+.primary_a22cb0, /*default button*/
+.lookFilled__201d5.colorBrand__201d5, /*Generic button*/
+.actionMenuButton_d84e0f, /*... button*/
+.newBadge__105ba, /*new badge*/
+.vc-addon-badge /*vencord new badge*/
 {
   background-color: var(--dark-accent) !important;
 }
-[id="---new-messages-bar"] /*new messages line on not read*/
+
+[id="---new-messages-bar"], /*new messages line on not read*/
+.wrapper__3412a:not([data-read-only=true]):not([data-disabled=true]):not(:focus-within):hover, /*gif picker border color*/
+.reaction__23977.reactionMe__23977, /*reaction border*/
+.wrapper__3412a:not([data-read-only=true]):has(input:focus,textarea:focus)/*emoji finder border*/
 {
   border-color: var(--dark-accent) !important;
 }
-.unreadPillCapStroke__908e2 /*color for the badge ate the end*/
+.unreadPillCapStroke__908e2, /*color for the badge ate the end*/
+path[fill="var(--text-brand)"]
 {
   fill:  var(--dark-accent) !important;
   color: var(--dark-accent) !important;
 }
-.content__908e2/*date text at the middle of the unread alert*/
+.content__908e2,/*date text at the middle of the unread alert*/
+.newBadge__105ba,
+.primary_a22cb0, /*default button*/
+.lookFilled__201d5.colorBrand__201d5, /*Generic button*/
+.actionMenuButton_d84e0f, /*... button*/
+.lookFilled__201d5.colorBrand__201d5
 {
   color: var(--dark-button-font-color) !important;
 }
-[class^="improved__"], h3[class^="improved__"] /*whats new*/
+[class^="improved__"], h3[class^="improved__"], /*whats new*/
+.selectedIcon__3f413, /*selected checkmark*/
+.reaction__23977.reactionMe__23977 .reactionCount__23977, /*reaction text*/
+.container__927fc .text-md\/medium_cf4812,
+.container__927fc .text-sm\/semibold_cf4812,
+.title__9293f /*chat panel title*/
 {
-  color: var(--dark-accent);
+  color: var(--dark-accent) !important;
+}
+.embedFull__623de.embed__623de.markup__75297.justifyAuto__623de /*embbed border*/
+{
+  border-left-color: var(--dark-accent) !important;
+}
+.reaction__23977.reactionMe__23977,
+.categoryFadeBlurple_d02962
+{
+  background-color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / .24) !important;
+}
+.mana-text-inputs .wrapper__3412a:not([data-read-only=true]):has(input:focus,textarea:focus)
+{
+  outline: 1px solid var(--dark-accent);
+}
+.editPencilIcon__2d060 path,
+path[fill="var(--interactive-normal)"]
+{
+  fill:  var(--dark-button-font-color) !important;
+  color: var(--dark-button-font-color) !important;
+}
+.primary_a22cb0:hover,
+.lookFilled__201d5:hover.colorBrand__201d5,/*button hover*/
+.actionMenuButton_d84e0f:hover,
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover
+{
+  background-color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / 1) !important;
+}
+.primary_a22cb0:active,
+.lookFilled__201d5:active.colorBrand__201d5,/*button hover*/
+.actionMenuButton_d84e0f:active,
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:active
+{
+    background-color: hsla(from var(--dark-accent) h calc(s - 40) calc(l - 40) / 1) !important;
+}
+.themed_aa8da2.item_aa8da2
+{
+    color: rgb(216, 216, 216);
+}
+.item_aa8da2.selected_aa8da2.themed_aa8da2
+{
+    color: var(--dark-button-font-color) !important;
+}
+
+.eyebrow_cf4812.headerText_aa8da2
+{
+    color: rgb(216, 216, 216);
+    text-decoration: underline !important;
+}
+.radioIndicatorChecked__88a69 .refreshIconStroke__88a69
+{
+    stroke: var(--dark-accent);
+}
+.collapseButton__427f0
+{
+  left: -3px !important;
+}
+.markReadButton__427f0
+{
+    margin: 0 12px;
+}
+.top_aa8da2 .item_aa8da2.brand_aa8da2
+{
+    --selected-tab-item-color: var(--dark-accent);
 }

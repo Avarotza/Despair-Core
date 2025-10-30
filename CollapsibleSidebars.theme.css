@@ -331,7 +331,7 @@ foreignObject[mask="url(#svg-mask-status-screenshare)"]
   background-color: #0000 !important;
 }
 
-.visual-refresh .panels_c48ade:hover [class^="container__"] [class^="buttons__"]
+.visual-refresh [class^="panels_"]:hover [class^="container__"] [class^="buttons__"]
 {
   scale: 100%;
   opacity: 100%;

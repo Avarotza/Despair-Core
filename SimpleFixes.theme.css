@@ -6,6 +6,7 @@
  * @description Simple fixes from the Vencord Server.
 */
 
+@import url(".backup-assets/compact-title-bar.css");
 @import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
 @import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
 

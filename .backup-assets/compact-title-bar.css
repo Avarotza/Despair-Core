@@ -1,12 +1,18 @@
-.base__5e434
+.bar_c38106
 {
-    margin-top: -34px;
+    pointer-events: none;
 }
 .trailing_c38106
 {
     margin-top: 80px;
+    pointer-events: all !important;
+    z-index: 101 !important;
 }
-section.container__9293f
+.base__5e434
 {
-  pointer-events: none;
+    margin-top: -34px;
+}
+.winButtons_c38106
+{
+    pointer-events: all !important;
 }

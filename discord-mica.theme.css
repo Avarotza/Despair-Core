@@ -1,7 +1,7 @@
 /**
  * @name Discord Mica patch
  * @author Avarotza
- * @version 0.2.6.7
+ * @version 0.2.6.8-6
  * @description patch for discord mica for other themes
 */
  @import url("https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css");
@@ -27,6 +27,7 @@
   /* Titlebar */
   --custom-app-top-bar-height: calc(24px + var(--space-sm)); /* Set to 0 if you don't want to use Discord title-bar */
   --title-bar-icon: flex; /* Set to none to remove icons */
+  --custom-input-border-color:var(--dark-accent) !important;
   }
 
 .visual-refresh .clickable_f37cb1, .visual-refresh .hasBanner_f37cb1 .header_f37cb1, /*Server name*/
@@ -100,7 +101,11 @@
 .row__0624f.marginBottom8_fd297e,
 .background__1fed1,
 .card__5cea9,
-.box_f8c98c
+.box_f8c98c,
+.accountProfileCard__1fed1,
+.emptyContainer_de8069,
+.defaultKeybindGroup__740f2,
+.vc-card-base
 {
   background-color: var(--dark-background-accent) !important;
 }
@@ -143,9 +148,35 @@
 .visual-refresh .channelHeader__35a7e,
 .visual-refresh .messages__1ccd1,
 .visual-refresh .messagesPopoutWrap__45690,
-.quickswitcher_ac6cb0
+.quickswitcher_ac6cb0,
+.container_fed6d3,
+div.container_a2f514.fixClipping_efbae7,
+.chatContent_f75fb0,
+.chat_f75fb0,
+.theme-dark .themed__9293f,
+.theme-light .themed__9293f,
+.nowPlayingColumn__133bf,
+.tabBody__133bf
 {
   background-color: #0000 !important;
+}
+.fixedContent__409aa:after
+{
+  background: #0000;
+}
+.card__73069,
+.box_f8c98c,
+.vc-card-base,
+.vc-card-normal,
+.vc-addon-card,
+.embedFull__623de,
+.secondary_a22cb0,
+.folderGroupBackground__48112,
+[class*="popover"],
+.menu_c1e9c4,
+.file__0ccae
+{
+  border-color: #0000 !important;
 }
 /*end me*/
 .wrapper__14245.packHeader_e94b8c,
@@ -153,8 +184,7 @@
 .visual-refresh .messageGroupWrapper__45690,
 .scroller_affa7e.thin_d125d2.scrollerBase_d125d2,
 .embedFull__623de,
-.content_fed6d3,
-.accountProfileCard__1fed1
+.content_fed6d3
 {
   background-color: #222222;/*bruh*/
 }
@@ -163,7 +193,8 @@
 [aria-label="Send a gift"],
 .buttons__74017 div:nth-child(3),
 .standardStickerShortcut__3ad28,
-.unicodeShortcut_b9ee0c
+.unicodeShortcut_b9ee0c,
+.pointerCover_d125d2
 {
   display: none !important;
 }
@@ -203,7 +234,11 @@
 .newBadge__105ba, /*new badge*/
 .vc-addon-badge,/*vencord new badge*/
 .result__71961[aria-selected=true], /*quickswitcher selected*/
-.loadMoreButton__5cea9 /*Load more button*/
+.loadMoreButton__5cea9, /*Load more button*/
+.circleIconButton__5bc7e:hover:not(.disabled__5bc7e), /* channel "+" and "discover" button*/
+.vc-btn-primary,
+.mini_a562c8 .barFill_a562c8,
+.slider_a562c8 .barFill_a562c8
 {
   background-color: var(--dark-accent) !important;
 }
@@ -211,12 +246,20 @@
 [id="---new-messages-bar"], /*new messages line on not read*/
 .wrapper__3412a:not([data-read-only=true]):not([data-disabled=true]):not(:focus-within):hover, /*gif picker border color*/
 .reaction__23977.reactionMe__23977, /*reaction border*/
-.wrapper__3412a:not([data-read-only=true]):has(input:focus,textarea:focus)/*emoji finder border*/
+.wrapper__3412a:not([data-read-only=true]):has(input:focus,textarea:focus),/*emoji finder border*/
+.wrapper__72c38:not([data-read-only=true]):not([data-disabled=true]):not(:focus-within):hover,
+.input__0ed4f:not([readOnly]).focused__0ed4f,
+.input__0ed4f:not([readOnly]).focused__0ed4f:hover,
+.input__0ed4f:not([readOnly]):focus,
+.input__0ed4f:not([readOnly]):focus:hover,
+.isUnread__908e2
 {
   border-color: var(--dark-accent) !important;
 }
 .unreadPillCapStroke__908e2, /*color for the badge ate the end*/
-path[fill="var(--text-brand)"]
+path[fill="var(--text-brand)"],
+.lottieIconColors__5eb9b:hover :not(defs *)[fill][fill-opacity], /*gif, stickers*/
+.active__24af7 .buttonWrapper__24af7, .buttonWrapper__24af7:hover /*gif, stickers*/
 {
   fill:  var(--dark-accent) !important;
   color: var(--dark-accent) !important;
@@ -238,7 +281,9 @@ path[fill="var(--text-brand)"]
 .reaction__23977.reactionMe__23977 .reactionCount__23977, /*reaction text*/
 .container__927fc .text-md\/medium_cf4812,
 .container__927fc .text-sm\/semibold_cf4812,
-.title__9293f /*chat panel title*/
+.title__9293f, /*chat panel title*/
+.clickable_c99c29:hover,/*inbox button*/
+.tab_f8303a.vertical_f8303a.selected_f8303a
 {
   color: var(--dark-accent) !important;
 }
@@ -251,9 +296,12 @@ path[fill="var(--text-brand)"]
 {
   background-color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / .24) !important;
 }
-.mana-text-inputs .wrapper__3412a:not([data-read-only=true]):has(input:focus,textarea:focus)
+.mana-text-inputs .wrapper__3412a:not([data-read-only=true]):has(input:focus,textarea:focus),
+.mana-text-inputs .wrapper__72c38:not([data-read-only=true]):has(input:focus,textarea:focus),
+.wrapper__72c38:not([data-read-only=true]):has(input:focus,textarea:focus)
 {
-  outline: 1px solid var(--dark-accent);
+  outline: 2px solid var(--dark-accent) !important;
+  outline-color: var(--dark-accent) !important;
 }
 .editPencilIcon__2d060 path,
 path[fill="var(--interactive-normal)"],
@@ -268,6 +316,8 @@ path[fill="var(--interactive-normal)"],
 .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover,
 .result__71961[aria-selected=true]:hover,
 .lookFilled__201d5.colorPrimary__201d5:hover,
+.vc-btn-primary:hover,
+.hoverBarButton_f84418:hover,
 .loadMoreButton__5cea9 /*Load more button*/
 {
   background-color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / 1) !important;
@@ -277,6 +327,9 @@ path[fill="var(--interactive-normal)"],
 .actionMenuButton_d84e0f:active,
 .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:active,
 .lookFilled__201d5.colorPrimary__201d5:active,
+.circleIconButton__5bc7e:active:not(.disabled__5bc7e),
+.vc-btn-primary:active,
+.hoverBarButton_f84418:active
 .loadMoreButton__5cea9 /*Load more button*/
 {
   background-color: hsla(from var(--dark-accent) h calc(s - 40) calc(l - 40) / 1) !important;
@@ -295,6 +348,29 @@ path[fill="var(--interactive-normal)"],
   color: rgb(216, 216, 216);
   text-decoration: underline !important;
 }
+
+.topic__6ec1a a,
+.markup__75297 a,
+.anchor_edefb8
+{
+  color: var(--dark-accent);
+}
+
+.topic__6ec1a a:hover,
+.markup__75297 a:hover,
+.anchor_edefb8:hover
+{
+  color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 15) / 1) !important;
+  text-decoration: underline dashed;
+}
+
+.topic__6ec1a a:active,
+.markup__75297 a:active,
+.anchor_edefb8:active
+{
+  color: hsla(from var(--dark-accent) h calc(s - 20) calc(l - 25) / 1) !important;
+  text-decoration: underline;
+}
 .radioIndicatorChecked__88a69 .refreshIconStroke__88a69
 {
   stroke: var(--dark-accent);
@@ -310,4 +386,13 @@ path[fill="var(--interactive-normal)"],
 .top_aa8da2 .item_aa8da2.brand_aa8da2
 {
   --selected-tab-item-color: var(--dark-accent);
+}
+.tab_f8303a.vertical_f8303a.selected_f8303a
+{
+  border-inline-start: 1.5px solid var(--dark-accent)
+}
+.chat_f75fb0[data-has-border=true],
+.container_c8ffbb
+{
+  border: none !important;
 }

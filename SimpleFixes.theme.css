@@ -25,7 +25,7 @@
     --vr-header-snippet-button-padding: 0 !important;
     
     /*custom discord loading gif*/
-    --loading-panel: url("https://raw.githubusercontent.com/Vencord/Vesktop/refs/heads/main/static/shiggy.gif");
+    --loading-panel: url(".backup-assets/shiggy-backup.gif");
 }
 
 /* Hide nameplates */

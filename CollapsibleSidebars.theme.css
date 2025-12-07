@@ -1,7 +1,7 @@
 /**
  * @name Collapsible Sidebars
  * @author scattagain, Avarotza
- * @version 0.0.8.10
+ * @version 0.0.9.0
 */
 
 @import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
@@ -46,9 +46,12 @@
 }
 
 /*Search bar radius fix*/
-.sidebarListRounded_c48ade
+.sidebarListRounded_c48ade,
+.sidebarListRounded__5e434,
+.bannerVisible_f37cb1 .header_f37cb1
 {
   border-radius: 0 !important;
+  border-start-start-radius: 0px !important;
 }
 /* Collapsible sidebars */
 .visual-refresh [class^="sidebarList_"] {
